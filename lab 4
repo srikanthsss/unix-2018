@@ -1,0 +1,49 @@
+lab-4
+
+Question 1
+
+Shell script to print only date and time
+
+date=`date +"%D %T"`
+echo "$date"
+
+Question 2
+
+Shell script to check whether a nuber is positive or negative
+
+echo "Enter a number"
+read abc
+if [ "$abc" -gt 0 ]
+then
+   echo "Positive"
+elif [ "$abc" -lt 0 ]
+then
+   echo "Negative"
+fi
+
+Question 3
+
+Shell script to print student grades
+
+echo "Enter your percentage"
+read perc
+if [ "$perc" -ge 90 ]
+then
+	echo "A Grade"
+elif [ "$perc" -ge 80 ]
+then
+	echo "B Grade"
+elif [ "$perc" -ge 70 ]
+then 
+	echo "C Grade"
+elif [ "$perc" -ge 60 ]
+then
+	echo "D Grade"
+else
+	echo "Fail"
+fi
+
+
+Question 4
+
+sort only name fields
