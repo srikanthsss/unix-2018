@@ -1,0 +1,73 @@
+$ sed 's/manager/supervisor/p' srikanth
+employee name   employee id   post           salary
+abhi            16ug08045    supervisor         300000
+abhi            16ug08045    supervisor         300000
+sam             16ug08056    ast supervisor     200000
+sam             16ug08056    ast supervisor     200000
+sushanth        16ug08046    supervisor      100000
+srini           16ug08030   ast supervasior  80000
+
+cs2016b111@user:~/srikanth$ vim srikanth
+cs2016b111@user:~/srikanth$ sed 's/manager/supervisor/p' srikanth
+employee name   employee id   post           salary
+abhi            16ug08045    supervisor         300000
+abhi            16ug08045    supervisor         300000
+sam             16ug08056    ast supervisor     200000
+sam             16ug08056    ast supervisor     200000
+sushanth        16ug08046    supervisor      100000
+srini           16ug08030   ast supervasior  80000
+
+cs2016b111@user:~/srikanth$ sed 's/manager/supervisor/g' srikanth
+employee name   employee id   post           salary
+abhi            16ug08045    supervisor         300000
+sam             16ug08056    ast supervisor     200000
+sushanth        16ug08046    supervisor      100000
+srini           16ug08030   ast supervasior  80000
+
+cs2016b111@user:~/srikanth$ sed 's/supervisor/manager/g' srikanth
+employee name   employee id   post           salary
+abhi            16ug08045    manager         300000
+sam             16ug08056    ast manager     200000
+sushanth        16ug08046    manager      100000
+srini           16ug08030   ast supervasior  80000
+
+
+
+
+
+cs2016b111@user:~/srikanth$ sed 's/agarwal/aagaarwaal/' test
+aagaarwaal
+aaagaarwaal
+aagaarwaal
+agaarwal
+agarwaal
+
+cs2016b111@user:~/srikanth$ grep -e "agarwal" -e "aggarwal" test
+agarwal
+aagarwal
+agarwal
+cs2016b111@user:~/srikanth$ grep -e "agarwal" -e "aggarwal" -e aagaarwal test
+agarwal
+aagarwal
+agarwal
+cs2016b111@user:~/srikanth$ grep [a aa] "agarwal" -e "aggarwal" -e aagaarwal test
+
+cs2016b111@user:~/srikanth$ grep -e "agarwal" -e "aggarwal" -e aagaarwal test
+agarwal
+aagarwal
+agarwal
+cs2016b111@user:~/srikanth$ grep -e "agarwal" -e "aggarwal" -e "aagaarwal" test
+agarwal
+aagarwal
+agarwal
+cs2016b111@user:~/srikanth$ ^Cep [a aa] "agarwal" -e "aggarwal" -e aagaarwal test
+cs2016b111@user:~/srikanth$ grep -e[a A]g[ar][ra]wal test
+cs2016b111@user:~/srikanth$ grep -e[aA]g[ar][ra]wal test
+agarwal
+aagarwal
+agarwal
+
+cs2016b111@user:~/srikanth$ sed -n '1,3p' emp.list
+12187|sax|manager|accounts|40000
+12186|rax|developer|ast|30000
+12185|pax|staff|20000
